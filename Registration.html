@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Public Partcipation</title>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+
+<script type="text/javascript">
+	function valid() {
+		// body...
+		var password= document.forms["registration"]["password"].value;
+		var cpassword = document.forms["registration"]["cpassword"].value;
+		if (password!=cpassword) {
+			alert("Please Enter Correct Password");
+			return false;
+		}
+		 return true;
+	}
+</script>
+	</head>
+	<body>
+		<div class="content">
+			<h3 class="text"> Registration form </h3>
+
+	<form method="post" action="" name="registration" onsubmit="return valid();">
+
+		<label for="fname">First name:</label>
+		<input type="text" name="first_name" class="myInput" required="required" placeholder="First Name">
+
+		<label for="lname">Last name:</label>
+		<input type="text" name="lirst_name" class="myInput" required="required" placeholder="Lirst Name">
+
+		<label for="email">Email:</label>
+		<input type="email" name="email" class="myInput" required="required" placeholder="onyoredaniel@gmail.com" class="myInput">
+
+		<label for="password"> Password: </label>
+		<input type="password" name="password" id="password" class="myInput" required="required">
+
+		<label for="cpassword"> Confirm Password: </label>
+		<input type="password" name="cpassword" id="cpassword" class="myInput" required="required">
+
+
+		<input type="submit" class="submit"  value="Submit">
+
+	</form>
+	<h4 class="textcenter"> Already have an account?
+	 <a href="signin.html" class="anchor"> sign in </a> </h4>
+	</div>
+</body>
+</html>
